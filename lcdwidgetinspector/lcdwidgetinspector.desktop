@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=LCD Widgets
+X-GammaRay-Types=QLCDNumber;
+X-GammaRay-ServiceTypes=com.kdab.GammaRay.ToolFactory
+Exec=gammaray_lcdwidget_inspector

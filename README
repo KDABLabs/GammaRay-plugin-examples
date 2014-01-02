@@ -1,0 +1,25 @@
+# GammaRay Example Plug-ins
+
+## What's this?
+
+This repository contains a few examples on how to develop plug-ins for the 
+Qt introspection tool GammaRay (http://www.kdab.com/gammaray/).
+
+These plug-ins are meant for development and demonstration purpose only, none
+of them provide any actual useful functionality.
+
+This repository is also used to test if the development files installed by
+GammaRay are actually correct and complete to develop self-contained plug-ins.
+
+## Examples
+
+### LCD Widget Inspector
+
+Lists all QLCDNumber instances in an application and allows you to edit their properties.
+
+This shows:
+* Basic plug-in infrastructure
+* Access and filtering of the object list
+* Integration of the property editor
+
+Since nobody actually uses QLCDNumber, a small test program that does is included.

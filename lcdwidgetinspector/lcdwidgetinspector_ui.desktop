@@ -1,0 +1,4 @@
+[Desktop Entry]
+X-GammaRay-Id=lcdwidgetinspector
+X-GammaRay-ServiceTypes=com.kdab.GammaRay.ToolUiFactory
+Exec=gammaray_lcdwidget_inspector_ui
