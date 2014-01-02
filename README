@@ -20,6 +20,7 @@ Lists all QLCDNumber instances in an application and allows you to edit their pr
 This shows:
 * Basic plug-in infrastructure
 * Access and filtering of the object list
+* Remote selection handling
 * Integration of the property editor
 
 Since nobody actually uses QLCDNumber, a small test program that does is included.
