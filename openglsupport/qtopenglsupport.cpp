@@ -2,9 +2,20 @@
 
 #include <gammaray/core/metaobject.h>
 #include <gammaray/core/metaobjectrepository.h>
+#include <gammaray/core/util.h>
+#include <gammaray/core/varianthandler.h>
 
+#include <QOpenGLContext>
+#include <QSurfaceFormat>
+
+Q_DECLARE_METATYPE(QSurfaceFormat)
 Q_DECLARE_METATYPE(QGLContext*)
 Q_DECLARE_METATYPE(const QGLContext*)
+
+static QString qtGLContextToString(QGLContext* context)
+{
+  return GammaRay::VariantHandler::displayString(QVariant::fromValue(context->contextHandle()->format()));
+}
 
 QtOpenGLSupport::QtOpenGLSupport(GammaRay::ProbeInterface* probe, QObject* parent) :
   QObject(parent)
@@ -17,4 +28,7 @@ QtOpenGLSupport::QtOpenGLSupport(GammaRay::ProbeInterface* probe, QObject* paren
   MO_ADD_PROPERTY_RO(QGLWidget, bool, isSharing);
   MO_ADD_PROPERTY_RO(QGLWidget, bool, isValid);
   MO_ADD_PROPERTY_RO(QGLWidget, const QGLContext*, overlayContext);
+
+  GammaRay::VariantHandler::registerStringConverter<QGLContext*>(qtGLContextToString);
+  GammaRay::VariantHandler::registerStringConverter<const QGLContext*>(GammaRay::Util::addressToString);
 }
