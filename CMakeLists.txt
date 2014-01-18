@@ -4,7 +4,15 @@ cmake_minimum_required(VERSION 2.8.9)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-find_package(GammaRay REQUIRED)
+include(FeatureSummary)
+
+find_package(GammaRay REQUIRED NO_MODULE)
+set_package_properties(GammaRay PROPERTIES
+  TYPE REQUIRED
+  URL "http://www.kdab.com/gammaray"
+  DESCRIPTION "Qt introspection tool"
+  PURPOSE "Needed to build custom GammaRay plug-ins."
+)
 
 # more aggressive linker flags (for testing the GammaRay-provided development files for completeness)
 if(CMAKE_SYSTEM_NAME MATCHES Linux OR CMAKE_SYSTEM_NAME STREQUAL GNU)
@@ -14,13 +22,9 @@ if(CMAKE_SYSTEM_NAME MATCHES Linux OR CMAKE_SYSTEM_NAME STREQUAL GNU)
   endif()
 endif()
 
-
-# TODO replace with macro_log_features
-message("found: ${GammaRay_FOUND}")
-message("version: ${GammaRay_VERSION}")
-message("includes: ${GammaRay_INCLUDE_DIRS}")
-
 # TODO this should not be necessary once the target file contains that
 include_directories(${GammaRay_INCLUDE_DIRS})
 
 add_subdirectory(lcdwidgetinspector)
+
+feature_summary(WHAT ALL)
