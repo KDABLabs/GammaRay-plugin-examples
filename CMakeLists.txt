@@ -26,5 +26,6 @@ endif()
 include_directories(${GammaRay_INCLUDE_DIRS})
 
 add_subdirectory(lcdwidgetinspector)
+add_subdirectory(openglsupport)
 
-feature_summary(WHAT ALL)
+feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

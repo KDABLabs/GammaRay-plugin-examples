@@ -24,3 +24,12 @@ This shows:
 * Integration of the property editor
 
 Since nobody actually uses QLCDNumber, a small test program that does is included.
+
+### QtOpenGL Support
+
+Adds support for displaying QtOpenGL data types and non-QObject properties.
+
+This shows:
+* Non-UI plug-ins
+* Custom variant handlers
+* Metatype system for non-QObject properties

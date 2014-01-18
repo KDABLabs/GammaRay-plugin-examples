@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=QtOpenGL Support
+X-GammaRay-Types=QGLWidget;
+X-GammaRay-ServiceTypes=com.kdab.GammaRay.ToolFactory
+Exec=gammaray_qtopenglsupport
+Hidden=true
