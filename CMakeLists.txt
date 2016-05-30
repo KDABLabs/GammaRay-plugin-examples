@@ -1,12 +1,12 @@
 project(gammaray-plugin-examples)
 
-cmake_minimum_required(VERSION 2.8.9)
+cmake_minimum_required(VERSION 2.8.12)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 include(FeatureSummary)
 
-find_package(GammaRay REQUIRED NO_MODULE)
+find_package(GammaRay 2.4.50 REQUIRED NO_MODULE)
 set_package_properties(GammaRay PROPERTIES
   TYPE REQUIRED
   URL "http://www.kdab.com/gammaray"
@@ -21,9 +21,6 @@ if(CMAKE_SYSTEM_NAME MATCHES Linux OR CMAKE_SYSTEM_NAME STREQUAL GNU)
     set(CMAKE_MODULE_LINKER_FLAGS "-Wl,--fatal-warnings -Wl,--no-undefined -lc ${CMAKE_MODULE_LINKER_FLAGS}")
   endif()
 endif()
-
-# TODO this should not be necessary once the target file contains that
-include_directories(${GammaRay_INCLUDE_DIRS})
 
 add_subdirectory(lcdwidgetinspector)
 add_subdirectory(openglsupport)

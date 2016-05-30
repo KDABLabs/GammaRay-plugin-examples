@@ -1,0 +1,6 @@
+{
+    "id": "gammaray_qtopenglsupport",
+    "name": "QtOpenGL Support",
+    "types": [ "QGLWidget" ],
+    "hidden": true
+}

@@ -17,7 +17,7 @@ class QtOpenGLSupportFactory : public QObject, public GammaRay::StandardToolFact
 {
   Q_OBJECT
   Q_INTERFACES(GammaRay::ToolFactory)
-  Q_PLUGIN_METADATA(IID "com.kdab.gammaray.QtOpenGLSupport")
+  Q_PLUGIN_METADATA(IID "com.kdab.GammaRay.ToolFactory" FILE "qtopenglsupport.json")
 
 public:
   explicit QtOpenGLSupportFactory(QObject *parent = 0) : QObject(parent)

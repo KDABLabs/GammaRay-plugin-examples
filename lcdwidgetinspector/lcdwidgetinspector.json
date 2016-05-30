@@ -1,0 +1,5 @@
+{
+    "id": "gammaray_lcdwidget_inspector",
+    "name": "LCD Widgets",
+    "types": [ "QLCDNumber" ]
+}

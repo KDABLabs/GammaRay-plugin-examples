@@ -29,7 +29,7 @@ class LCDWidgetInspectorFactory : public QObject, public GammaRay::StandardToolF
 {
   Q_OBJECT
   Q_INTERFACES(GammaRay::ToolFactory)
-  Q_PLUGIN_METADATA(IID "com.kdab.gammaray.LCDWidgetInspector")
+  Q_PLUGIN_METADATA(IID "com.kdab.GammaRay.ToolFactory" FILE "lcdwidgetinspector.json")
 
 public:
   explicit LCDWidgetInspectorFactory(QObject *parent = 0) : QObject(parent)
