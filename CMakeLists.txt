@@ -6,7 +6,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 include(FeatureSummary)
 
-find_package(GammaRay 2.4.50 REQUIRED NO_MODULE)
+find_package(GammaRay 2.5 REQUIRED NO_MODULE)
 set_package_properties(GammaRay PROPERTIES
   TYPE REQUIRED
   URL "http://www.kdab.com/gammaray"

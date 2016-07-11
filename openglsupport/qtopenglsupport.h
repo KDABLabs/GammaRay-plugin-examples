@@ -23,12 +23,6 @@ public:
   explicit QtOpenGLSupportFactory(QObject *parent = 0) : QObject(parent)
   {
   }
-
-  inline QString name() const Q_DECL_OVERRIDE
-  {
-    return tr("QtOpenGL Support");
-  }
-
 };
 
 #endif
