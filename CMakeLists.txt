@@ -1,12 +1,12 @@
 project(gammaray-plugin-examples)
 
-cmake_minimum_required(VERSION 2.8.12)
+cmake_minimum_required(VERSION 3.0)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 include(FeatureSummary)
 
-find_package(GammaRay 2.5 REQUIRED NO_MODULE)
+find_package(GammaRay 2.8.50 REQUIRED NO_MODULE)
 set_package_properties(GammaRay PROPERTIES
   TYPE REQUIRED
   URL "http://www.kdab.com/gammaray"

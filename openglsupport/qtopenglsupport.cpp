@@ -24,10 +24,10 @@ QtOpenGLSupport::QtOpenGLSupport(GammaRay::ProbeInterface* probe, QObject* paren
 
   GammaRay::MetaObject *mo = 0;
   MO_ADD_METAOBJECT1(QGLWidget, QWidget);
-  MO_ADD_PROPERTY_RO(QGLWidget, QGLContext*, context);
-  MO_ADD_PROPERTY_RO(QGLWidget, bool, isSharing);
-  MO_ADD_PROPERTY_RO(QGLWidget, bool, isValid);
-  MO_ADD_PROPERTY_RO(QGLWidget, const QGLContext*, overlayContext);
+  MO_ADD_PROPERTY_RO(QGLWidget, context);
+  MO_ADD_PROPERTY_RO(QGLWidget, isSharing);
+  MO_ADD_PROPERTY_RO(QGLWidget, isValid);
+  MO_ADD_PROPERTY_RO(QGLWidget, overlayContext);
 
   GammaRay::VariantHandler::registerStringConverter<QGLContext*>(qtGLContextToString);
   GammaRay::VariantHandler::registerStringConverter<const QGLContext*>(GammaRay::Util::addressToString);
