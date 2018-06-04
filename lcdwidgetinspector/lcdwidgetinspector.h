@@ -15,7 +15,7 @@ class LCDWidgetInspector : public QObject
 {
   Q_OBJECT
 public:
-  explicit LCDWidgetInspector(GammaRay::ProbeInterface *probe, QObject *parent = 0);
+  explicit LCDWidgetInspector(GammaRay::Probe *probe, QObject *parent = 0);
 
 private slots:
   void selectionChanged(const QItemSelection &selection);

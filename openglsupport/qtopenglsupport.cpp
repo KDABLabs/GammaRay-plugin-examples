@@ -17,7 +17,7 @@ static QString qtGLContextToString(QGLContext* context)
   return GammaRay::VariantHandler::displayString(QVariant::fromValue(context->contextHandle()->format()));
 }
 
-QtOpenGLSupport::QtOpenGLSupport(GammaRay::ProbeInterface* probe, QObject* parent) :
+QtOpenGLSupport::QtOpenGLSupport(GammaRay::Probe* probe, QObject* parent) :
   QObject(parent)
 {
   Q_UNUSED(probe);

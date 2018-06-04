@@ -1,6 +1,6 @@
 
-#ifndef LCDWIDGETINSPECTOR_H
-#define LCDWIDGETINSPECTOR_H
+#ifndef QTOPENGLSUPPORT_H
+#define QTOPENGLSUPPORT_H
 
 #include <gammaray/core/toolfactory.h>
 
@@ -10,7 +10,7 @@ class QtOpenGLSupport : public QObject
 {
   Q_OBJECT
 public:
-  explicit QtOpenGLSupport(GammaRay::ProbeInterface *probe, QObject *parent = 0);
+  explicit QtOpenGLSupport(GammaRay::Probe *probe, QObject *parent = 0);
 };
 
 class QtOpenGLSupportFactory : public QObject, public GammaRay::StandardToolFactory<QGLWidget, QtOpenGLSupport>

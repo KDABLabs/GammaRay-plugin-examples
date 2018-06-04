@@ -2,13 +2,13 @@
 
 #include <gammaray/common/objectbroker.h>
 #include <gammaray/common/objectmodel.h>
-#include <gammaray/core/probeinterface.h>
+#include <gammaray/core/probe.h>
 #include <gammaray/core/objecttypefilterproxymodel.h>
 #include <gammaray/core/propertycontroller.h>
 
 #include <QItemSelectionModel>
 
-LCDWidgetInspector::LCDWidgetInspector(GammaRay::ProbeInterface* probe, QObject* parent) :
+LCDWidgetInspector::LCDWidgetInspector(GammaRay::Probe* probe, QObject* parent) :
   QObject(parent),
   m_propertyController(new GammaRay::PropertyController("com.kdab.GammaRay.LCDWidgetInspector", this))
 {
